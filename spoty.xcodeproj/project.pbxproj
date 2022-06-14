@@ -14,6 +14,15 @@
 		A718839F2856389800037184 /* spotyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A718839E2856389800037184 /* spotyTests.swift */; };
 		A71883A92856389800037184 /* spotyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A71883A82856389800037184 /* spotyUITests.swift */; };
 		A71883AB2856389800037184 /* spotyUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A71883AA2856389800037184 /* spotyUITestsLaunchTests.swift */; };
+		A71883B8285639C200037184 /* Song.swift in Sources */ = {isa = PBXBuildFile; fileRef = A71883B7285639C200037184 /* Song.swift */; };
+		A71883BA28563EB900037184 /* SongsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A71883B928563EB900037184 /* SongsViewModel.swift */; };
+		A71883C62856635300037184 /* DefaultSongsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = A71883C52856635300037184 /* DefaultSongsRepository.swift */; };
+		A71883C9285665CE00037184 /* DependencyLocator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A71883C8285665CE00037184 /* DependencyLocator.swift */; };
+		A71883CC28566A2300037184 /* AppResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = A71883CB28566A2300037184 /* AppResult.swift */; };
+		A7DF43DA2858EB0E0011FB66 /* GetSongsUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7DF43D92858EB0E0011FB66 /* GetSongsUseCase.swift */; };
+		A7DF43DC2858EB3C0011FB66 /* SongsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7DF43DB2858EB3C0011FB66 /* SongsRepository.swift */; };
+		A7DF43DE2858EC240011FB66 /* AttachSongsListenerUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7DF43DD2858EC240011FB66 /* AttachSongsListenerUseCase.swift */; };
+		A7DF43E028590EAD0011FB66 /* LoadNextRandomStateUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7DF43DF28590EAD0011FB66 /* LoadNextRandomStateUseCase.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +53,15 @@
 		A71883A42856389800037184 /* spotyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = spotyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A71883A82856389800037184 /* spotyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = spotyUITests.swift; sourceTree = "<group>"; };
 		A71883AA2856389800037184 /* spotyUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = spotyUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		A71883B7285639C200037184 /* Song.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Song.swift; sourceTree = "<group>"; };
+		A71883B928563EB900037184 /* SongsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongsViewModel.swift; sourceTree = "<group>"; };
+		A71883C52856635300037184 /* DefaultSongsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultSongsRepository.swift; sourceTree = "<group>"; };
+		A71883C8285665CE00037184 /* DependencyLocator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyLocator.swift; sourceTree = "<group>"; };
+		A71883CB28566A2300037184 /* AppResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppResult.swift; sourceTree = "<group>"; };
+		A7DF43D92858EB0E0011FB66 /* GetSongsUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetSongsUseCase.swift; sourceTree = "<group>"; };
+		A7DF43DB2858EB3C0011FB66 /* SongsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongsRepository.swift; sourceTree = "<group>"; };
+		A7DF43DD2858EC240011FB66 /* AttachSongsListenerUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttachSongsListenerUseCase.swift; sourceTree = "<group>"; };
+		A7DF43DF28590EAD0011FB66 /* LoadNextRandomStateUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadNextRandomStateUseCase.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,8 +112,14 @@
 		A718838C2856389500037184 /* spoty */ = {
 			isa = PBXGroup;
 			children = (
+				A71883CA28566A0900037184 /* app_result */,
+				A71883C7285665C300037184 /* di */,
+				A71883C1285662F300037184 /* repository */,
+				A71883C0285642C400037184 /* ui */,
+				A71883BF285642B500037184 /* model */,
+				A71883BE285642A600037184 /* viewmodel */,
+				A71883BD2856429500037184 /* usecase */,
 				A718838D2856389500037184 /* spotyApp.swift */,
-				A718838F2856389500037184 /* ContentView.swift */,
 				A71883912856389800037184 /* Assets.xcassets */,
 				A71883932856389800037184 /* Preview Content */,
 			);
@@ -125,6 +149,73 @@
 				A71883AA2856389800037184 /* spotyUITestsLaunchTests.swift */,
 			);
 			path = spotyUITests;
+			sourceTree = "<group>";
+		};
+		A71883BD2856429500037184 /* usecase */ = {
+			isa = PBXGroup;
+			children = (
+				A7DF43D92858EB0E0011FB66 /* GetSongsUseCase.swift */,
+				A7DF43DD2858EC240011FB66 /* AttachSongsListenerUseCase.swift */,
+				A7DF43DF28590EAD0011FB66 /* LoadNextRandomStateUseCase.swift */,
+			);
+			path = usecase;
+			sourceTree = "<group>";
+		};
+		A71883BE285642A600037184 /* viewmodel */ = {
+			isa = PBXGroup;
+			children = (
+				A71883B928563EB900037184 /* SongsViewModel.swift */,
+			);
+			path = viewmodel;
+			sourceTree = "<group>";
+		};
+		A71883BF285642B500037184 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				A71883B7285639C200037184 /* Song.swift */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		A71883C0285642C400037184 /* ui */ = {
+			isa = PBXGroup;
+			children = (
+				A718838F2856389500037184 /* ContentView.swift */,
+			);
+			path = ui;
+			sourceTree = "<group>";
+		};
+		A71883C1285662F300037184 /* repository */ = {
+			isa = PBXGroup;
+			children = (
+				A71883C42856634100037184 /* default */,
+				A7DF43DB2858EB3C0011FB66 /* SongsRepository.swift */,
+			);
+			path = repository;
+			sourceTree = "<group>";
+		};
+		A71883C42856634100037184 /* default */ = {
+			isa = PBXGroup;
+			children = (
+				A71883C52856635300037184 /* DefaultSongsRepository.swift */,
+			);
+			path = default;
+			sourceTree = "<group>";
+		};
+		A71883C7285665C300037184 /* di */ = {
+			isa = PBXGroup;
+			children = (
+				A71883C8285665CE00037184 /* DependencyLocator.swift */,
+			);
+			path = di;
+			sourceTree = "<group>";
+		};
+		A71883CA28566A0900037184 /* app_result */ = {
+			isa = PBXGroup;
+			children = (
+				A71883CB28566A2300037184 /* AppResult.swift */,
+			);
+			path = app_result;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -257,7 +348,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A71883C62856635300037184 /* DefaultSongsRepository.swift in Sources */,
+				A71883B8285639C200037184 /* Song.swift in Sources */,
+				A71883BA28563EB900037184 /* SongsViewModel.swift in Sources */,
+				A7DF43E028590EAD0011FB66 /* LoadNextRandomStateUseCase.swift in Sources */,
+				A7DF43DA2858EB0E0011FB66 /* GetSongsUseCase.swift in Sources */,
+				A71883CC28566A2300037184 /* AppResult.swift in Sources */,
 				A71883902856389500037184 /* ContentView.swift in Sources */,
+				A7DF43DE2858EC240011FB66 /* AttachSongsListenerUseCase.swift in Sources */,
+				A7DF43DC2858EB3C0011FB66 /* SongsRepository.swift in Sources */,
+				A71883C9285665CE00037184 /* DependencyLocator.swift in Sources */,
 				A718838E2856389500037184 /* spotyApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
